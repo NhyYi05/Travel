@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOURS</title>
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header__header">
+        <a href="#" class="header__logo">Tours.</a>
+        <div class="header__social-media">
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-telegram'></i></a>
+            <a href="#"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <nav class="header__navbar">
+            <a href="#">Destinations</a>
+            <a href="#">Booking</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="section__banner">
+        <div class="section__slider">
+            <div class="section__slide">
+                <img src="assets/images/china.jpg" alt="">
+                <div class="section__left-info">
+                    <div class="section__penetrate-blur">
+                        <h1>Chi</h1>
+                    </div>
+                    <div class="section__content">
+                        <h3>01. China Forest Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                             et dolore magna aliqua..
+                        </p>
+                        <a href="#" class="section__btn">More Details</a>
+                    </div>
+                </div>
+                <div class="section__right-info">
+                    <h1>na</h1>
+                    <h3>Forest</h3>
+                </div>
+            </div>
+
+            <div class="section__slide">
+                <img src="assets/images/china.jpg" alt="">
+                <div class="section__left-info">
+                    <div class="section__penetrate-blur">
+                        <h1>Jap</h1>
+                    </div>
+                    <div class="section__content">
+                        <h3>02. Japan Forest Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                             et dolore magna aliqua..
+                        </p>
+                        <a href="#" class="section__btn">More Details</a>
+                    </div>
+                </div>
+                <div class="section__right-info">
+                    <h1>an</h1>
+                    <h3>Forest</h3>
+                </div>
+            </div>
+
+            <div class="section__slide">
+                <img src="assets/images/africa.jpg" alt="">
+                <div class="section__left-info">
+                    <div class="section__penetrate-blur">
+                        <h1>Afr</h1>
+                    </div>
+                    <div class="section__content">
+                        <h3>03. Africa Forest Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                             et dolore magna aliqua..
+                        </p>
+                        <a href="#" class="section__btn">More Details</a>
+                    </div>
+                </div>
+                <div class="section__right-info">
+                    <h1>ica</h1>
+                    <h3>Forest</h3>
+                </div>
+            </div>
+
+            <div class="section__slide">
+                <img src="assets/images/brazil.jpg" alt="">
+                <div class="section__left-info">
+                    <div class="section__penetrate-blur">
+                        <h1>Bra</h1>
+                    </div>
+                    <div class="section__content">
+                        <h3>04. Brazil Forest Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                             et dolore magna aliqua..
+                        </p>
+                        <a href="#" class="section__btn">More Details</a>
+                    </div>
+                </div>
+                <div class="section__right-info">
+                    <h1>zil</h1>
+                    <h3>Forest</h3>
+                </div>
+            </div>
+
+            <div class="section__slide">
+                <img src="assets/images/serbia.jpg" alt="">
+                <div class="section__left-info">
+                    <div class="section__penetrate-blur">
+                        <h1>Ser</h1>
+                    </div>
+                    <div class="section__content">
+                        <h3>05. Serbia Forest Tour</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                             et dolore magna aliqua..
+                        </p>
+                        <a href="#" class="section__btn">More Details</a>
+                    </div>
+                </div>
+                <div class="section__right-info">
+                    <h1>bia</h1>
+                    <h3>Forest</h3>
+                </div>
+            </div>
+        </div>
+        <div class="section__navigation">
+            <span clas="section__prev-btn">
+                <i class='bx bx-chevron-left'></i>
+            </span>
+            <span class="section__next-btn">
+                <i class='bx bx-chevron-right'></i>
+            </span>
+        </div>
+    </section>
+    <script src="script.js">
+        const nextBtn = document.querySelector('.section__next-btn');
+const prevBtn = document.querySelector('.section__prev-btn');
+const slides = document.querySelectorAll('.section__slide');
+const numberOfSlides = slides.length;
+let slideNumber = 0;
+
+
+nextBtn.onclick = () => {
+    slides.forEach((section__slide) => {
+        section__slide.classList.remove('active');
+    })
+
+    section__slideNumber++;
+
+    if (section__slideNumber > (numberOfSlides - 1)) {
+        section__slideNumber = 0;
+    }
+
+    slides[section__slideNumber].classList.add('active');
+}
+
+
+prevBtn.onclick = () => {
+    slides.forEach((section__slide) => {
+        section__slide.classList.remove('active');
+    })
+
+    section__slideNumber--;
+
+    if (section__slideNumber < 0) {
+        section__slideNumber = numberOfSlides - 1;
+    }
+
+    slides[section__slideNumber].classList.add('active');
+}
+    </script>
+</body>
+</html>
